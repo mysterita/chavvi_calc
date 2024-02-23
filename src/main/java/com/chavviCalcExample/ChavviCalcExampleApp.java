@@ -79,11 +79,20 @@ public class ChavviCalcExampleApp {
     Boolean success = true;
 
     switch (command) {
+      case 'a':
+        System.out.println("Enter value for A");
+        a = Double.parseDouble(scan.nextLine());
+        break;
+      case 'b':
+        System.out.println("Enter value for B");
+        b = Double.parseDouble(scan.nextLine());
+        break;
+      
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
       default:
-        System.out.println("ERROR: Unknown commmand");
+        System.out.printf("ERROR: Unknown commmand: %s%n",command);
         success = false;
     }
 
