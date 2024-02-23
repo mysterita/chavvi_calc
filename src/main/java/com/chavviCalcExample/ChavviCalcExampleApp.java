@@ -87,12 +87,23 @@ public class ChavviCalcExampleApp {
         System.out.println("Enter value for B");
         b = Double.parseDouble(scan.nextLine());
         break;
-      
+      case '+':
+        System.out.printf("Result is: %.3f%n", a + b);
+        break;
+      case '-':
+        System.out.printf("Result is: %.3f%n", a - b);
+        break;
+      case '*':
+        System.out.printf("Result is: %.3f%n", a * b);
+        break;
+      case '/':
+        System.out.printf("Result is: %.3f%n", a / b);
+        break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
       default:
-        System.out.printf("ERROR: Unknown commmand: %s%n",command);
+        System.out.printf("ERROR: Unknown commmand: %s%n", command);
         success = false;
     }
 
