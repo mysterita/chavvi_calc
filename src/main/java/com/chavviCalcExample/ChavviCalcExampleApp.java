@@ -6,6 +6,8 @@ import java.util.*;
  * chavvi calc calculator
  */
 public class ChavviCalcExampleApp {
+  static double a = 0.0;
+  static double b = 0.0;
 
   public static void main(String[] args) {
     Scanner scan = new Scanner(System.in);
@@ -28,8 +30,7 @@ public class ChavviCalcExampleApp {
   //
   private static void printMenuLine() {
     System.out.println(
-      "----------------------------------------------------------"
-    );
+        "----------------------------------------------------------");
   }
 
   private static void printMenuCommand(Character command, String desc) {
@@ -41,10 +42,22 @@ public class ChavviCalcExampleApp {
     printMenuLine();
     System.out.println("ChavviCalc");
     printMenuLine();
-
+    printMenuParameters();
+    printMenuLine();
+    printMenuCommand('a', "Enter a value for A");
+    printMenuCommand('b', "Enter a value for B");
+    printMenuCommand('+', "Add");
+    printMenuCommand('-', "Subtract");
+    printMenuCommand('*', "Multiply");
+    printMenuCommand('/', "Divide");
+    printMenuCommand('c', "Clear");
     printMenuCommand('q', "Quit");
 
     printMenuLine();
+  }
+
+  private static void printMenuParameters() {
+    System.out.printf("A = %.3f    B = %.3f%n", a, b);
   }
 
   // get first character from input
