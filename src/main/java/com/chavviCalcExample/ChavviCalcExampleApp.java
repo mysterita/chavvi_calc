@@ -99,6 +99,11 @@ public class ChavviCalcExampleApp {
       case '/':
         System.out.printf("Result is: %.3f%n", a / b);
         break;
+      case 'c':
+        System.out.println("Cleared values for A and B.");
+        a = 0.0;
+        b = 0.0;
+        break;
       case 'q':
         System.out.println("Thank you for using Chavvi Calc");
         break;
