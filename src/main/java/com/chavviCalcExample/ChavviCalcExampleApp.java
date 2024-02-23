@@ -28,11 +28,13 @@ public class ChavviCalcExampleApp {
   //
   // menu functions
   //
+  // Print a line to separate menu sections
+
   private static void printMenuLine() {
     System.out.println(
         "----------------------------------------------------------");
   }
-
+  // Print a static menu command
   private static void printMenuCommand(Character command, String desc) {
     System.out.printf("%s\t%s\n", command, desc);
   }
@@ -55,7 +57,7 @@ public class ChavviCalcExampleApp {
 
     printMenuLine();
   }
-
+  // Print the current values of A and B
   private static void printMenuParameters() {
     System.out.printf("A = %.3f    B = %.3f%n", a, b);
   }
@@ -75,6 +77,7 @@ public class ChavviCalcExampleApp {
   }
 
   // calculator functions
+  // Execute the selected command
   private static Boolean executeCommand(Scanner scan, Character command) {
     Boolean success = true;
 
