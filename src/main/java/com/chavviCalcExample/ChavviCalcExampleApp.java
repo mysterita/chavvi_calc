@@ -34,6 +34,7 @@ public class ChavviCalcExampleApp {
     System.out.println(
         "----------------------------------------------------------");
   }
+
   // Print a static menu command
   private static void printMenuCommand(Character command, String desc) {
     System.out.printf("%s\t%s\n", command, desc);
@@ -57,6 +58,7 @@ public class ChavviCalcExampleApp {
 
     printMenuLine();
   }
+
   // Print the current values of A and B
   private static void printMenuParameters() {
     System.out.printf("A = %.3f    B = %.3f%n", a, b);
@@ -100,7 +102,11 @@ public class ChavviCalcExampleApp {
         System.out.printf("Result is: %.3f%n", a * b);
         break;
       case '/':
-        System.out.printf("Result is: %.3f%n", a / b);
+        if (b != 0) {
+          System.out.printf("Result is: %.3f%n", a / b);
+        } else {
+          System.out.println("ERROR: Division by zero.");
+        }
         break;
       case 'c':
         System.out.println("Cleared values for A and B.");
