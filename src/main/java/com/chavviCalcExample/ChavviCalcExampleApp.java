@@ -86,11 +86,21 @@ public class ChavviCalcExampleApp {
     switch (command) {
       case 'a':
         System.out.println("Enter value for A");
-        a = Double.parseDouble(scan.nextLine());
+        try {
+          a = Double.parseDouble(scan.nextLine());
+        } catch (Exception e) {
+          System.out.println("Error: 'A' must be a numerical value");
+          success = false;
+        }
         break;
       case 'b':
         System.out.println("Enter value for B");
-        b = Double.parseDouble(scan.nextLine());
+        try {
+          b = Double.parseDouble(scan.nextLine());
+        } catch (Exception e) {
+          System.out.println("Error: 'B' must be a numerical value");
+          success = false;
+        }
         break;
       case '+':
         System.out.printf("Result is: %.3f%n", a + b);
